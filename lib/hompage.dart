@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
   List toDoList = [
     ['test', false],
     ['non', true],
-    ['stnahosutnh', false]
+    ['stnahosutnh', true]
   ];
 
   void checkBoxChanged(int index) {
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.redAccent.shade100,
       appBar: AppBar(
         title: const Text(
-          'Simple Todo',
+          'Todo List',
         ),
         backgroundColor: Colors.red,
       ),
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             taskName: toDoList[index][0],
             taskCompleted: toDoList[index][1],
             onChanged: (value) => checkBoxChanged(index),
-            deleteFunction: (contex) => deleteTask(index),
+            deleteFunction: (context) => deleteTask(index),
           );
         },
       ),
